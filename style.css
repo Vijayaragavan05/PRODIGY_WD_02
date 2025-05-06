@@ -1,0 +1,81 @@
+/* Background with linear gradient */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: linear-gradient(135deg, #89f7fe, #66a6ff); /* Blue gradient */
+  margin: 0;
+  padding: 50px;
+  min-height: 100vh;
+}
+
+/* Container styling */
+.container {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  display: inline-block;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  animation: fadeIn 1s ease-out;
+  max-width: 400px;
+  width: 90%;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Stopwatch display */
+#display {
+  font-size: 6vw;
+  margin: 20px 0;
+  color: #333;
+}
+
+/* Button container with flexbox */
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Button styles with gradient */
+.buttons button {
+  padding: 0.6em 1.5em;
+  font-size: 1.2em;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  background: linear-gradient(90deg, #ff758c, #ff7eb3);
+  color: white;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.buttons button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Laps list */
+#laps {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  color: #444;
+  text-align: left;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  #display {
+    font-size: 8vw;
+  }
+
+  .buttons button {
+    width: 100%;
+    font-size: 1em;
+    margin: 6px 0;
+  }
+}
